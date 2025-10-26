@@ -48,11 +48,11 @@ img{ max-width:100%; height:auto; display:block }
   background:#fff; border-bottom:1px solid var(--border);
   backdrop-filter:saturate(180%) blur(6px);
 }
-.header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; position:relative }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; position:relative; padding: 6px 32px; }
 
 .site-header .brand{ display:flex; align-items:center; gap:.5rem; text-decoration:none; color:inherit }
 .site-header .brand-text{ font-size:1.5rem; font-weight:700 }
-.site-header .brand img{ height:48px; width:auto }
+.site-header .brand img{ height:120px; width:auto; margin-right: 10px; vertical-align: middle; margin-left: -25px; }
 
 .nav-toggle{
   display:inline-flex; align-items:center; justify-content:center;
