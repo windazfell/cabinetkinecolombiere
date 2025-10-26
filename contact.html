@@ -1,0 +1,153 @@
+<!-- /contact.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacts &amp; RDV – Cabinet de kinésithérapie</title>
+  <meta name="description" content="Coordonnées et prise de contact : adresse, téléphone, e-mail. Envoyez vos informations et disponibilités.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Instrument+Sans:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="">
+        <img src="assets/logo.png" alt="" aria-hidden="true" width="40" height="40" />
+        <span class="brand-text">CKC</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" class="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="equipe.html">Équipe</a></li>
+          <li><a href="locaux.html">Locaux &amp; matériel</a></li>
+          <li><a href="prestations.html">Prestations</a></li>
+          <li><a class="cta" href="contact.html" aria-current="page">Contacts / RDV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="wrap">
+        <h1>Contacts &amp; RDV</h1>
+        <p class="lead">Partagez vos besoins et disponibilités au secrétariat. Nous revenons vers vous rapidement.</p>
+      </div>
+    </section>
+
+    <section class="contact-prep">
+      <div class="wrap">
+        <div class="prep-card">
+          <h2>Se préparer au rendez-vous</h2>
+          <ul>
+            <li>Une ordonnance d’un médecin ou chirurgien</li>
+            <li>Vos carte vitale et de mutuelle</li>
+            <li>Les éventuelles imageries (radio, IRM, scanner…)</li>
+            <li>Une tenue de sport confortable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-block">
+      <div class="wrap grid-2 contact-layout">
+      <!-- Colonne gauche : Horaires -->
+        <aside class="contact-card hours-card">
+          <h2>Horaires</h2>
+          <table class="hours-table" aria-describedby="hours-note">
+            <thead>
+              <tr>
+                <th scope="col">Jour</th>
+                <th scope="col">Ouverture</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Lundi</th><td>8h - 19h</td></tr>
+              <tr><th scope="row">Mardi</th><td>8h - 19h</td></tr>
+              <tr><th scope="row">Mercredi</th><td>8h - 19h</td></tr>
+              <tr><th scope="row">Jeudi</th><td>8h - 19h</td></tr>
+              <tr><th scope="row">Vendredi</th><td>8h - 19h</td></tr>
+              <tr><th scope="row">Samedi</th><td>Fermé</td></tr>
+              <tr><th scope="row">Dimanche</th><td>Fermé</td></tr>
+            </tbody>
+          </table>
+            <p id="hours-note" class="muted">Des prise en charge à domicile sont possibles, contactez le cabinet pour prendre rendez-vous.</p>
+        </aside>
+
+      <!-- Colonne droite : Coordonnées + Plan -->
+        <div class="contact-card">
+          <h2>Coordonnées</h2>
+            <ul class="contact-list">
+              <li><strong>Adresse :</strong> 62 rue du marché, 74890 Bons-en-Chablais</li>
+              <li><strong>Téléphone :</strong> <a href="tel:+33400000000">04 00 00 00 00</a></li>
+            </ul>
+            <img src="assets/exterieure.png" alt="Cabinet moderne et accueillant de kinésithérapie">
+            <div class="map-embed">
+              <iframe title="Plan d’accès"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=62%20rue%20du%20march%C3%A9,%2074890%20Bons-en-Chablais&output=embed">
+              </iframe>
+            </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand brand-footer" href="index.html">
+        <img src="assets/logo.png" alt="" aria-hidden="true" width="36" height="36" />
+        <span>Cabinet Kiné Bons</span>
+        </a>
+        <p><strong>Téléphone :</strong> <a href="tel:+33400000000">04 00 00 00 00</a></p>
+        <p>62 rue du marché, 74890 Bons-en-Chablais</p>
+        <p class="footnote">
+          © <span id="year"></span> – Dernière mise à jour :
+          <time id="last-updated" datetime=""></time> – Tous droits réservés.
+        </p>
+     </div>
+      <nav aria-label="Liens utiles" class="footer-links">
+        <div class="footer-menu">
+        <a href="equipe.html">Équipe</a>
+        <a href="locaux.html">Locaux</a>
+        <a href="prestations.html">Prestations</a>
+        </div>
+        <p class="horaires">Ouverture du lundi au vendredi<br>
+        Fermeture du samedi au dimanche</p>
+        <section class="pmr" aria-labelledby="pmr-title">
+          <h4 id="pmr-title">Accessibilité PMR</h4>
+            <ul class="pmr-icons" role="list">
+              <li class="pmr-item">
+                <i class="fa-solid fa-wheelchair" aria-hidden="true"></i>
+                <span class="sr-only">Accès fauteuil roulant</span>
+              </li>
+              <li class="pmr-item">
+                <i class="fa-solid fa-eye-slash" aria-hidden="true"></i>
+                <span class="sr-only">Accueil personnes malvoyantes</span>
+              </li>
+              <li class="pmr-item">
+                <i class="fa-solid fa-ear-deaf" aria-hidden="true"></i>
+                <span class="sr-only">Accueil personnes malentendantes</span>
+              </li>
+            </ul>
+        </section>
+      </nav>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <p><a href="politique-confidentialite.html">Politique de confidentialité</a></p>
+        <img src="assets/caducée.png" alt="Caducée de la kinésithérapie" class="footer-caducee">
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
