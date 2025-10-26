@@ -305,6 +305,8 @@ img{ max-width:100%; height:auto; display:block }
     column-gap:clamp(16px,3vw,36px)
   }
 }
+  .note {
+    font-size: 0.95rem; color: var(--muted); margin-top: 1rem; line-height: 1.6; text-align: justify; text-justify: inter-word;}
 
 @media (max-width: 719px){
   .hero-media img,
