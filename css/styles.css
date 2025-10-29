@@ -98,6 +98,28 @@ img{ max-width:100%; height:auto; display:block }
 .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden }
 .skip-link:focus{ left:16px; top:12px; width:auto; height:auto; background:#111; color:#fff; padding:8px 12px; border-radius:8px }
 
+/* Empêche le logo de se faire écraser par le flex */
+.site-header .brand{
+  flex-shrink: 0;
+}
+
+/* Logo responsive : hauteur fluide, proportions conservées */
+.site-header .brand img{
+  height: clamp(48px, 8vw, 120px); /* min 48px, max 120px, fluide entre les deux */
+  width: auto;
+}
+
+/* Ajustements spécifiques smartphone */
+@media (max-width: 719px){
+  .site-header .wrap{
+    padding-inline: 16px; /* un peu d’air sur les côtés */
+  }
+  .site-header .brand img{
+    height: clamp(44px, 12vw, 72px); /* logo plus compact sur mobile */
+    margin-left: 0;                  /* on neutralise ton décalage négatif éventuel */
+  }
+}
+
 /* =========================================
    Sections (Accueil / Hero)
    ========================================= */
