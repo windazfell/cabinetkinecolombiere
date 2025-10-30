@@ -213,6 +213,21 @@ img{ max-width:100%; height:auto; display:block }
 /* CTA bandeau */
 .cta-banner{ padding-block:32px; background:linear-gradient(90deg, rgba(21,55,72,0.08), rgba(106,139,83,0.08)) }
 
+/* Bloc "avis Google" sur la page Contact */
+.avis-google{
+  text-align: center;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 720px;      /* encart un peu plus étroit que la largeur de .wrap */
+  margin: 16px auto 0;   /* centré */
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+.avis-google h3{ margin: 0 0 .5rem; font-size: 1.25rem; color: var(--brand) }
+.avis-google p{ margin: 0 0 .75rem; color: var(--ink) }
+.avis-google .btn{ display: inline-block; margin-top: .25rem }
+
 /* =========================================
    Footer
    ========================================= */
@@ -344,6 +359,58 @@ img{ max-width:100%; height:auto; display:block }
   .bandeau.inverse .bandeau-image{ order:1 }
   .bandeau.inverse .bandeau-content{ order:2 }
   .bandeau-image img{ height:clamp(200px,35vh,320px); object-fit:cover }
+}
+
+/* === Header fix: alignements & nav sur une seule ligne === */
+
+/* 1) Le conteneur du header : même logique que .wrap + flex */
+.site-header .wrap {
+  max-width: var(--wrap, 1200px);   /* garde ta largeur max si tu as une var, sinon 1200px */
+  margin: 0 auto;
+  padding-inline: clamp(16px, 2vw, 32px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  text-align: initial;              /* évite un centrage hérité */
+}
+
+/* 2) La brand reste à gauche et ne se fait pas compresser */
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 0;            /* PAS de margin:auto qui centrerait */
+  flex-shrink: 0;       /* ne pas écraser le logo */
+}
+
+/* 3) La navigation reste sur UNE seule ligne */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;            /* ajuste si besoin */
+  flex-wrap: nowrap;    /* évite le retour à la ligne */
+  margin-left: auto;    /* pousse la nav à droite */
+}
+.main-nav a {
+  white-space: nowrap;  /* évite les sauts de ligne dans les libellés */
+}
+
+/* 4) Logo responsive (on garde ta version plus grande) */
+.site-header .brand img {
+  height: clamp(64px, 10vw, 140px);
+  width: auto;
+}
+
+/* Ajustements quand l’espace devient un peu juste (tablette/petit laptop) */
+@media (max-width: 1100px) {
+  .main-nav { gap: 20px; }
+}
+
+/* Smartphone: nav gérée par ton menu mobile; ici on protège juste le logo */
+@media (max-width: 719px) {
+  .site-header .wrap { padding-inline: 16px; }
+  .site-header .brand img { height: clamp(56px, 14vw, 100px); margin-left: 0; }
 }
 
 /* =========================================
