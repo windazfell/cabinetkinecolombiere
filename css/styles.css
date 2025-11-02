@@ -210,8 +210,8 @@ img{ max-width:100%; height:auto; display:block }
 }
 .form-foot{ display:flex; align-items:center; gap:14px; flex-wrap:wrap }
 
-/* CTA bandeau */
-.cta-banner{ padding-block:32px; background:linear-gradient(90deg, rgba(21,55,72,0.08), rgba(106,139,83,0.08)) }
+/* CTA bandeau */ 
+.cta-banner{ padding-block:32px; background: linear-gradient(90deg, rgba(21,55,72,0.08), rgba(106,139,83,0.08)) }
 
 /* Bloc "avis Google" sur la page Contact */
 .avis-google{
@@ -411,6 +411,22 @@ img{ max-width:100%; height:auto; display:block }
 @media (max-width: 719px) {
   .site-header .wrap { padding-inline: 16px; }
   .site-header .brand img { height: clamp(56px, 14vw, 100px); margin-left: 0; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root{
+  --header-offset: 120px;   /* hauteur approx. du header sur desktop */
+}
+@media (max-width: 719px){
+  :root{ --header-offset: 90px; }  /* header un peu plus compact sur mobile */
+}
+
+/* Le navigateur réserve cette marge quand il scrolle vers un #ancre */
+html{
+  scroll-padding-top: var(--header-offset);
 }
 
 /* =========================================
