@@ -1,12 +1,12 @@
-<!-- /locaux.html -->
+<!-- /actalites.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Locaux & matériel – Cabinet de kinésithérapie de la Colombière</title>
-  <meta name="description" content="Découvrez des locaux modernes et un plateau technique équipé : press, rameur, rack à squats, vélos, barres, haltères et matériel de rééducation pour une prise en charge optimale.">
+  <title>Prestations de kinésithérapie – Conventionnées & déconventionnées | Cabinet de kinésithérapie de la Colombière</title>
+  <meta name="description" content="Rééducation personnalisée (orthopédie, neurologie, TMS, pneumologie, rhumatologie, sport) et prestations déconventionnées : interventions en entreprise, clubs sportifs, activité physique adaptée.">
 
   <meta name="theme-color" content="#153748">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
@@ -21,21 +21,20 @@
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Locaux & matériel – Cabinet de kinésithérapie de la Colombière">
-  <meta property="og:description" content="Cabinet moderne et plateau technique équipé à Bons-en-Chablais.">
+  <meta property="og:title" content="Prestations de kinésithérapie – Conventionnées & déconventionnées">
+  <meta property="og:description" content="Soins conventionnés (rééducation) et offres déconventionnées (entreprise, clubs, APA) à Bons-en-Chablais.">
   <meta property="og:image" content="https://cabinetkinecolombiere.netlify.app/assets/og-logo.png">
   <meta property="og:image:width"content="1200">
   <meta property="og:image:height"content="630">
-  <meta property="og:url" content="https://ton-domaine.fr/locaux.html">
+  <meta property="og:url" content="https://cabinetkinecolombiere.netlify.app/prestations">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="canonical" href="https://ton-domaine.fr/locaux.html">
+  <link rel="canonical" href="https://ton-domaine.fr/prestations.html">
 </head>
 
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
-
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
@@ -47,8 +46,8 @@
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="equipe.html">Équipe</a></li>
-          <li><a href="locaux.html" aria-current="page">Locaux &amp; matériel</a></li>
-          <li><a href="prestations.html">Prestations</a></li>
+          <li><a href="locaux.html">Locaux &amp; matériel</a></li>
+          <li><a href="prestations.html" aria-current="page">Prestations</a></li>
           <li><a class="cta" href="contact.html">Contacts / RDV</a></li>
         </ul>
       </nav>
@@ -56,58 +55,20 @@
   </header>
 
   <main id="contenu">
-    <section class="page-hero">
-      <div class="wrap">
-        <h1>Locaux &amp; matériel</h1>
-        <p class="lead">Espaces lumineux, plateau technique adapté et matériel professionnel.</p>
-      </div>
-    </section>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Actualités du cabinet</h1>
+      <p class="lead">
+        Stages, nouvelles prestations, événements et informations importantes du Cabinet de kinésithérapie de la Colombière.
+      </p>
+    </div>
+  </section>
 
-    <section class="bandeaux">
-      <!-- Accueil -->
-      <div class="bandeau">
-        <div class="bandeau-image">
-          <img src="assets/accueil.png" alt="Accueil du cabinet">
-        </div>
-        <div class="bandeau-content">
-          <h2>Accueil du cabinet</h2>
-          <p>Un espace d’accueil dédié.</p>
-        </div>
-      </div>
-      <!-- Plateau technique -->
-      <div class="bandeau inverse">
-        <div class="bandeau-image">
-          <img src="assets/plateau technique.png" alt="Grand plateau technique">
-        </div>
-        <div class="bandeau-content">
-          <h2>Plateau technique</h2>
-          <p>Un grand plateau technique de 90m².</p>
-        </div>
-      </div>
-      <!-- Box -->
-      <div class="bandeau">
-        <div class="bandeau-image">
-          <img src="assets/box.png" alt="Salle individuelle">
-        </div>
-        <div class="bandeau-content">
-          <h2>Salle individuelle</h2>
-          <p>Pour la réalisation des bilans et des soins dans le respect du secret professionnel. </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="equipment">
-      <div class="wrap">
-        <h2>Matériel</h2>
-        <ul class="checklist">
-          <li>Élastiques, haltères, kettlebells</li>
-          <li>Vélo, rameur</li>
-          <li>Presse, leg extension, rack à squats</li>
-          <li>Électrothérapie, ondes de choc, pressothérapie, cryothérapie, BFR</li>
-          <li>Équipements d'équilibre</li>
-        </ul>
-      </div>
-    </section>
+  <section class="wrap actu-wrap">
+    <div id="actu-content">
+      <p>Chargement des actualités…</p>
+    </div>
+  </section>
   </main>
 
   <footer class="site-footer">
@@ -153,6 +114,22 @@
     </div>
   </footer>
 
+  </script>
+<!-- Script pour charger le contenu des actualités depuis un fichier Markdown -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  fetch('actualites.md')
+    .then((response) => response.text())
+    .then((markdown) => {
+      const html = marked.parse(markdown);
+      document.getElementById('actu-content').innerHTML = html;
+    })
+    .catch(() => {
+      document.getElementById('actu-content').textContent =
+        "Impossible de charger les actualités pour le moment.";
+    });
+</script>
+
   <script src="js/main.js" defer></script>
   <script type="application/ld+json">
 {
@@ -162,10 +139,9 @@
    {"@type":"ListItem","position":1,
     "name":"Accueil","item":"https://ton-domaine.fr/"},
    {"@type":"ListItem","position":2,
-    "name":"Locaux & matériel","item":"https://cabinetkinecolombiere.netlify.app/locaux"}
+    "name":"Prestations","item":"https://cabinetkinecolombiere.netlify.app/prestations"}
  ]
 }
-</script>
 
 </body>
 </html>

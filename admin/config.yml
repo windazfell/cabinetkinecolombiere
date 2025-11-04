@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main        # si ta branche s’appelle master, remplace par main
+
+media_folder: "assets/uploads"     # dossier où seront stockées les images
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "actualites.md"
+        name: "actualites"
+        label: "Page Actualités"
+        fields:
+          - { label: "Titre de la page", name: "title", widget: "string", default: "Actualités du cabinet" }
+          - { label: "Contenu", name: "body", widget: "markdown" }
