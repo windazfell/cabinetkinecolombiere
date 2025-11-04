@@ -5,7 +5,6 @@
   <title>Administration – Cabinet Kiné Colombière</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Optionnel : un tout petit style pour que ce soit propre -->
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -13,9 +12,24 @@
     }
   </style>
 
+  <!-- Netlify Identity widget (authentification) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   <!-- Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </head>
 <body>
+<script>
+  // Redirection vers /admin après login via Netlify Identity
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
